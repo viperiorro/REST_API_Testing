@@ -39,5 +39,9 @@ pipeline {
         always {
             junit 'test-results.xml'
         }
+
+        failure {
+            echo "The pipeline has failed!"
+        }
     }
 }
