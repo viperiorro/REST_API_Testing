@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    environment {
+        EMAIL = credentials('notes_email')
+        PASSWORD = credentials('notes_password')
+    }
+
     stages {
         stage('Checkout') {
             steps {
