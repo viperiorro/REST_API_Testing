@@ -11,7 +11,7 @@ logger = getLogger(__name__)
 
 @pytest.fixture(scope="session")
 def email():
-    return os.getenv("EMAIL")
+    return os.getenv("USERNAME")
 
 
 @pytest.fixture(scope="session")
