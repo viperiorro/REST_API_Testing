@@ -30,7 +30,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                bat 'python -m pytest -ra --junit-xml=test-results.xml'
+                bat 'python -m pytest -ra --junit-xml=test-results.xml --alluredir=allure-results'
             }
         }
     }
@@ -38,6 +38,8 @@ pipeline {
     post {
         always {
             junit 'test-results.xml'
+            // Report test results in allure
+            allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
         }
 
         failure {
