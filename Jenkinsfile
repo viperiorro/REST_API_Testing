@@ -17,7 +17,8 @@ pipeline {
             steps {
                 script {
                     env.PATH = "C:\\Users\\Oleksandr_Andriianov\\AppData\\Local\\Programs\\Python\\Python311;${env.PATH}"
-                    env.PATH = "C:\\Users\\Oleksandr_Andriianov\\scoop\\apps\\allure\\current\\bin;${env.PATH}"
+                    // C:\Users\Oleksandr_Andriianov\scoop\apps\allure\2.20.1\bin
+                    env.PATH = "C:\\Users\\Oleksandr_Andriianov\\scoop\\apps\\allure\\2.20.1\\bin;${env.PATH}"
                 }
             }
         }
